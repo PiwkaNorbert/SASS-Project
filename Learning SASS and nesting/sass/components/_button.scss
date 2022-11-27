@@ -9,10 +9,10 @@
         border-radius: 2em;
         transition: all 0.2s;
         position: relative;
-        font-size: 1.6rem;
+        font-size: $default-font-size;
     }
     &:hover{
-        transform: translateY(-3px);
+        transform: translateY(-2px);
         box-shadow: 0 1rem 2rem rgba($color-black,.2);
         &::after{
             transform: scale(1.4) scale(1.6);
@@ -20,13 +20,13 @@
         }
     }
     &:active{
-        transform: translateY(-px);
+        transform: translateY(0);
         box-shadow: 0 .5rem 1rem rgba($color-black,.2);
     
     }
 
     &::after{
-        content: '';
+        content: "";
         display: inline-block;
         height: 100%;
         width: 100%;
@@ -46,6 +46,13 @@
             background-color: $color-white;
         }
     }
+    &--green{
+        background-color: $color-primary;
+        color:$color-white;
+        &::after{
+            background-color: $color-primary;
+        }
+    }
     &--animated{
         animation: moveInButton 0.5s ease-out 0.75s;
     
@@ -53,4 +60,26 @@
     }
  }
 
- 
+ .btn-text{
+    &:link,&:visited{
+        font-size: $default-font-size;
+        color: $color-primary;
+        display: inline-block;
+        text-decoration: none;
+        border-bottom: 1px solid $color-primary;
+        padding: .3rem;
+        transition: all .2s;
+
+    }
+    &:hover{
+        background-color: $color-primary;
+        color: $color-grey-light-1;
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);
+        transform: translateY(-2px);
+    }
+    &:active{
+        box-shadow: 0 1rem 2rem rgba($color-black,.2);
+        transform: translateY(0);
+
+    }
+ }
