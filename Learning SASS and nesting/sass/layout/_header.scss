@@ -9,6 +9,7 @@
   background-size: cover;
   background-position: top;
   position: relative;
+
   
 
   @supports (clip-path: polygon(0,0)) or (-webkit-clip-path: polygon(0,0)){
@@ -28,6 +29,7 @@
                 rgba($color-primary-dark, 0.8)
               ),
               url("../img/hero.jpg");
+
   }
 
   @include respond(tab-port) {
